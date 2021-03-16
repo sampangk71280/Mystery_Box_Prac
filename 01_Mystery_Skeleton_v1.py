@@ -78,11 +78,11 @@ if __name__ == '__main__':
             self.balance.set(current_balance)
 
             # Edit label so user can see their balance
-            self.balance_label.configure(text="Balance {}".format(current_balance))
+            self.balance_label.configure(text="Balance: {}".format(current_balance))
 
 # main routine
 if __name__ == "__main__":
     root = Tk()
-    root.title("title goes here")
+    root.title("Mystery Boxes")
     something = Start(root)
     root.mainloop()
