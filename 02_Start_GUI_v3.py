@@ -6,8 +6,10 @@ import random
 class Start:
     def __init__(self, parent):
 
+        background_colour = "#EFEEFA"
+
         # GUI To get starting balance and stakes
-        self.start_frame = Frame(padx=10, pady=10)
+        self.start_frame = Frame(padx=10, pady=10, bg=background_colour)
         self.start_frame.grid()
 
         # Set initial balance to zero
@@ -16,7 +18,7 @@ class Start:
 
         # Mysetery Heading (row 0)
         self.mystery_box_label = Label(self.start_frame, text="Mystery Box Game",
-                                       font="Arial 19 bold")
+                                       font="Arial 19 bold", bg=background_colour)
         self.mystery_box_label.grid(row=0)
 
         # Initials Instructions (row 1)
@@ -26,11 +28,11 @@ class Start:
                                                "below. Then click the 'Add Funds' "
                                                "button and choose the stakes. The higher "
                                                "the stakes, the more ou can win!",
-                                          wrap=275, justify=LEFT, padx=10, pady=10)
+                                          wrap=275, justify=LEFT, padx=10, pady=10, bg=background_colour)
         self.mystery_instructions.grid(row=1)
 
         # Entry box, button, and error label (row 2)
-        self.entry_error_frame = Frame(self.start_frame, width=200)
+        self.entry_error_frame = Frame(self.start_frame, width=200, bg=background_colour)
         self.entry_error_frame.grid(row=2)
 
         self.start_amount_entry = Entry (self.entry_error_frame,
@@ -45,11 +47,11 @@ class Start:
 
         self.amount_error_label = Label(self.entry_error_frame, fg="maroon",
                                         text="", font="Arial 10 bold",
-                                        wrap=275, justify=LEFT)
+                                        wrap=275, justify=LEFT, bg=background_colour)
         self.amount_error_label.grid(row=1, columnspan=2, pady=5)
 
         # Button frame (row 3)
-        self.stakes_frame = Frame(self.start_frame)
+        self.stakes_frame = Frame(self.start_frame, bg=background_colour)
         self.stakes_frame.grid(row=3)
 
         # Buttons go here...
@@ -57,19 +59,19 @@ class Start:
         # Orange low stakes button...
         self.low_stakes_button = Button(self.stakes_frame, text="Low ($5)",
                                        command=lambda: self.to_game(1),
-                                       font=button_font, bg="#FF9933")
+                                       font=button_font, bg="#FFADFB")
         self.low_stakes_button.grid(row=0, column=0, pady=10)
 
         # Yellow medium stakes button...
         self.medium_stakes_button = Button(self.stakes_frame, text="Medium ($10)",
                                        command=lambda: self.to_game(2),
-                                       font=button_font, bg="#FFFF33")
+                                       font=button_font, bg="#B7ADFF")
         self.medium_stakes_button.grid(row=0, column=1, padx=5, pady=10)
 
         # Green high stakes button...
         self.high_stakes_button = Button(self.stakes_frame, text="High ($15)",
                                        command=lambda: self.to_game(3),
-                                       font=button_font, bg="#99FF33")
+                                       font=button_font, bg="#ADCFFF")
         self.high_stakes_button.grid(row=0, column=2, pady=10)
 
         # Disable all stakes buttons at start
