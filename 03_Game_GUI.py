@@ -25,56 +25,56 @@ class Start:
         root.withdraw()
 
 
-if __name__ == '__main__':
-    class Game:
-        def __init__(self, partner, stakes, starting_balance):
-            print(stakes)
-            print(starting_balance)
 
-            # disable low stakes button
-            partner.lowstakes_button.config(state=DISABLED)
+class Game:
+    def __init__(self, partner, stakes, starting_balance):
+        print(stakes)
+        print(starting_balance)
 
-            # initialise variables
-            self.balance = IntVar()
+        # disable low stakes button
+        partner.lowstakes_button.config(state=DISABLED)
 
-            # Set starting balance to amount entered by user of game
-            self.balance.set(starting_balance)
+        # initialise variables
+        self.balance = IntVar()
 
-            # GUI Setup
-            self.game_box = Toplevel()
-            self.game_frame = Frame(self.game_box)
-            self.game_frame.grid()
+        # Set starting balance to amount entered by user of game
+        self.balance.set(starting_balance)
 
-            # Heading row (row 0)
-            self.heading_label = Label(self.game_frame, text="Heading",
-                                       font="Arial 24 bold", padx=10,
-                                       pady=10)
-            self.heading_label.grid(row=0)
+        # GUI Setup
+        self.game_box = Toplevel()
+        self.game_frame = Frame(self.game_box)
+        self.game_frame.grid()
 
-            # Balance Label
-            self.balance_frame = Frame(self.game_frame)
-            self.balance_frame.grid(row=1)
+        # Heading row (row 0)
+        self.heading_label = Label(self.game_frame, text="Heading",
+                                   font="Arial 24 bold", padx=10,
+                                   pady=10)
+        self.heading_label.grid(row=0)
 
-            self.balance_label = Label(self.game_frame, text="Balance...")
-            self.balance_label.grid(row=2)
+        # Balance Label
+        self.balance_frame = Frame(self.game_frame)
+        self.balance_frame.grid(row=1)
 
-            self.play_button = Button(self.game_frame, text="Gain",
-                                      padx=10, pady=10, command=self.reveal_boxes)
-            self.play_button.grid(row=3)
+        self.balance_label = Label(self.game_frame, text="Balance...")
+        self.balance_label.grid(row=2)
 
-        def reveal_boxes(self):
-            # retrieval the balance from the initial function..
-            current_balance = self.balance.get()
+        self.play_button = Button(self.game_frame, text="Gain",
+                                  padx=10, pady=10, command=self.reveal_boxes)
+        self.play_button.grid(row=3)
 
-            # Adjust the blanace (subtract game cost and add pay out)
-            # For testing purposes, just add 2
-            current_balance += 2
+    def reveal_boxes(self):
+        # retrieval the balance from the initial function..
+        current_balance = self.balance.get()
 
-            # Set balance to adjusted balance
-            self.balance.set(current_balance)
+        # Adjust the blanace (subtract game cost and add pay out)
+        # For testing purposes, just add 2
+        current_balance += 2
 
-            # Edit label so user can see their balance
-            self.balance_label.configure(text="Balance: {}".format(current_balance))
+        # Set balance to adjusted balance
+        self.balance.set(current_balance)
+
+        # Edit label so user can see their balance
+        self.balance_label.configure(text="Balance: {}".format(current_balance))
 
 # main routine
 if __name__ == "__main__":

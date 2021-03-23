@@ -10,23 +10,19 @@ class Start:
         self.start_frame = Frame(padx=10, pady=10)
         self.start_frame.grid()
 
-        # Mysetery Heading (row 0)
-        self.mystery_box_label = Label(self.start_frame, text="Mystery Box Game",
-                                       font="Arial 19 bold")
-        self.mystery_box_label.grid(row=1)
-
-        # Entry box ... (row 1)
-        self.start_amount_entry = Entry(self.start_frame, font="Arial 16 bold")
-        self.start_amount_entry.grid(row=2)
-
-        # Play button (row 2)
-        self.lowstakes_button = Button(text="Low ($5)",
-                                       command=lambda: self.to_game(1))
-        self.lowstakes_button.grid(row=2, pady=10)
+        self.push_me_button = Button(text="Push Me", command=self.to_game)
+        self.push_me_button.grid(row=0, pady=10)
 
     def to_game(self, stakes):
-        starting_balance = self.start_amount_entry.get()
-        Game(self, stakes, starting_balance)
+
+        # retrieve starting balance
+        starting_balance = 50
+        stakes = 1
+
+        Game(self,stakes, starting_balance)
+
+        # hide start up window
+        root.withdraw()
 
 
 
@@ -40,9 +36,12 @@ class Game:
 
         # initialise variables
         self.balance = IntVar()
-
         # Set starting balance to amount entered by user of game
         self.balance.set(starting_balance)
+
+        # get value of stakes (use it as a multiplier when calculating winnings)
+        self.multiplier = IntVar()
+        self.multiplier.set(stakes)
 
         # GUI Setup
         self.game_box = Toplevel()
@@ -50,10 +49,20 @@ class Game:
         self.game_frame.grid()
 
         # Heading row (row 0)
-        self.heading_label = Label(self.game_frame, text="Heading",
+        self.heading_label = Label(self.game_frame, text="Play...",
                                    font="Arial 24 bold", padx=10,
                                    pady=10)
         self.heading_label.grid(row=0)
+
+        # Instructions label
+        self.instructions_label = Label(self.game_frame, wrap=300, justify=LEFT,
+                                        text="Press <enter or click the 'Open "
+                                             "Boxes' button to reveal the "
+                                             "contents of the mystery boxes.",
+                                        font="Arial 10", padx=10, pady=10)
+        self.instructions_label.grid(row=1)
+
+
 
         # Balance Label
         self.balance_frame = Frame(self.game_frame)
@@ -69,6 +78,30 @@ class Game:
     def reveal_boxes(self):
         # retrieval the balance from the initial function..
         current_balance = self.balance.get()
+        stakes_multiplier = self.multiplier.get()
+
+        round_winnings = 0
+        prizes = []
+        for item in range(0, 3):
+            prize_num = random.randint (1,100)
+
+            if 0 < prize_num <= 5:
+                prize = "gold\n(${})".format(5 * stakes_multiplier)
+                round_winnings += 5 * stakes_multiplier
+
+            elif 5 < prize_num <= 25:
+                prize = "silver\n(${})".format(2 * stakes_multiplier)
+                round_winnings += 2 * stakes_multiplier
+            elif 25 < prize_num <= 65:
+                prize = "copper\n(${})".format(1 * stakes_multiplier)
+                round_winnings += 1 * stakes_multiplier
+            else:
+                prize = "lead\n($0)"
+
+            prizes.append(prize)
+
+                # print("You won {} which is worth {}".format(prize, round_winnings))
+            winnings += round_winnings
 
         # Adjust the blanace (subtract game cost and add pay out)
         # For testing purposes, just add 2
