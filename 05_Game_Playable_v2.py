@@ -160,8 +160,11 @@ class Game:
 
         # Display prizes...
         self.prize1_label.config(image=photo1)
-        self.prize2_label.config()
-        self.prize3_label.config(text=prizes[2], bg=backgrounds[2])
+        self.prize1_label.photo=photo1
+        self.prize2_label.config(image=photo2)
+        self.prize2_label.photo=photo2
+        self.prize3_label.config(image=photo3)
+        self.prize3_label.photo=photo3
 
         # deduct cost of game
         current_balance -= 5 * stakes_multiplier
