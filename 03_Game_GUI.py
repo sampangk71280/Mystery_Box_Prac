@@ -32,7 +32,7 @@ class Game:
         print(starting_balance)
 
         # disable low stakes button
-        partner.lowstakes_button.config(state=DISABLED)
+        # partner.lowstakes_button.config(state=DISABLED)
 
         # initialise variables
         self.balance = IntVar()
