@@ -111,26 +111,30 @@ class Game:
 
         round_winnings = 0
         prizes = []
+        backgrounds = []
         for item in range(0, 3):
             prize_num = random.randint (1,100)
 
             if 0 < prize_num <= 5:
                 prize = "gold\n(${})".format(5 * stakes_multiplier)
                 round_winnings += 5 * stakes_multiplier
-
+                back_colour = "#CEA935" # Gold colours
             elif 5 < prize_num <= 25:
                 prize = "silver\n(${})".format(2 * stakes_multiplier)
                 round_winnings += 2 * stakes_multiplier
+                back_colour = "#B7B7B5" # Silver colour
             elif 25 < prize_num <= 65:
                 prize = "copper\n(${})".format(1 * stakes_multiplier)
                 round_winnings += 1 * stakes_multiplier
+                back_colour = "#BC7F61" # copper colour
             else:
                 prize = "lead\n($0)"
 
             prizes.append(prize)
+            backgrounds.append(back_colour)
 
         # Display prizes...
-        self.prize1_label.config(text=prizes[0])
+        self.prize1_label.config(text=prizes[0], bg)
         self.prize2_label.config(text=prizes[1])
         self.prize3_label.config(text=prizes[2])
 
