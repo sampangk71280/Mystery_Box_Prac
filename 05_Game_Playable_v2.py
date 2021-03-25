@@ -11,9 +11,9 @@ class Start:
         self.start_frame.grid()
 
 
-        self.push_me_button = Button(self.start_frame, text="Push Me",
+        self.push_me_button = Button(self.start_frame, text="Push Now",
                                      command=self.to_game)
-        self.push_me_button.grid(row=0, pady=10)
+        self.push_me_button.grid(row=0)
 
     def to_game(self):
 
@@ -21,10 +21,8 @@ class Start:
         starting_balance = 50
         stakes = 2
 
-        Game(self, stakes, starting_balance)
-
-        # hide start up window
         self.start_frame.destroy()
+        Game(self, stakes, starting_balance)
 
 
 class Game:
@@ -40,6 +38,9 @@ class Game:
         # get value of stakes (use it as a multiplier when calculating winnings)
         self.multiplier = IntVar()
         self.multiplier.set(stakes)
+
+        # List for holding statistics
+        self.round_stats_list = []
 
         # GUI Setup
         self.game_box = Toplevel()
@@ -69,7 +70,7 @@ class Game:
         self.box_frame = Frame(self.game_frame)
         self.box_frame.grid(row=2, pady=10)
 
-        photo = PhotoImage(file="question.gif")
+        photo = PhotoImage(file="Mystery_box_images/question.gif")
 
         self.prize1_label = Label(self.box_frame, image=photo,
                                   padx=10, pady=10)
@@ -131,24 +132,24 @@ class Game:
 
         round_winnings = 0
         prizes = []
-        backgrounds = []
+        stats_prizes = []
         for item in range(0, 3):
             prize_num = random.randint (1,100)
 
             if 0 < prize_num <= 5:
-                prize = PhotoImage(file="gold.gif")
-                prize_list = "gold\n(${})".format(5 * stakes_multiplier)
+                prize = PhotoImage(file="Mystery_box_images/gold_med.gif")
+                prize_list = "gold (${})".format(5 * stakes_multiplier)
                 round_winnings += 5 * stakes_multiplier
             elif 5 < prize_num <= 25:
-                prize = PhotoImage(file="silver.gif")
-                prize_list = "silver\n(${})".format(2 * stakes_multiplier)
+                prize = PhotoImage(file="Mystery_box_images/silver_med.gif")
+                prize_list = "silver (${})".format(2 * stakes_multiplier)
                 round_winnings += 2 * stakes_multiplier
             elif 25 < prize_num <= 65:
-                prize = PhotoImage(file="copper.gif")
-                prize_list = "copper\n(${})".format(1 * stakes_multiplier)
+                prize = PhotoImage(file="Mystery_box_images/copper_med.gif")
+                prize_list = "copper (${})".format(1 * stakes_multiplier)
                 round_winnings += 1 * stakes_multiplier
             else:
-                prize = PhotoImage(file="lead.gif")
+                prize = PhotoImage(file="Mystery_box_images/lead.gif")
                 prize_list = "lead\n($0)"
 
             prizes.append(prize)
@@ -178,6 +179,16 @@ class Game:
         balance_statement = "Game Cost: ${}\n Payback: ${} \n" \
                             "Current Balance: ${}".format(5 * stakes_multiplier,
                                                           round_winnings, current_balance)
+
+        # add round results to statistics list
+        round_summary = "{} | {} | {} - Cost: ${} | " \
+                        "Payback: ${} | Current Balance: " \
+                        "${}".format(stats_prizes[0], stats_prizes[1],
+                                     stats_prizes[2],
+                                     5 * stakes_multiplier, round_winnings,
+                                     current_balance)
+        self.round_stats_list.append(round_summary)
+        print(self.round_stats_list)
 
         # edit label so user can see their balance
         self.balance_label.config(text=balance_statement)
