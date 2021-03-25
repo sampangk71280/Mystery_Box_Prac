@@ -148,7 +148,7 @@ class Start:
         Game(self, stakes, starting_balance)
 
         # hide start up window
-        root.withdraw()
+        self.start_frame.destroy()
 
 
 
