@@ -272,7 +272,7 @@ class Game:
                 round_winnings += 1 * stakes_multiplier
             else:
                 prize = PhotoImage(file="Mystery_box_images/lead.gif")
-                prize_list = "lead\n($0)"
+                prize_list = "lead($0)"
 
             prizes.append(prize)
             stats_prizes.append(prize_list)
