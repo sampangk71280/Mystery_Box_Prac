@@ -219,7 +219,15 @@ class Game:
                                           "button. If you don't have enough money to play, "
                                           "the button will turn red and you need to quit "
                                           "the game. \n\n"
-                                          "The contents of the boxes will be ")
+                                          "The contents of the boxes will be added to your "
+                                          "Balance. The boxes could contain\n\n"
+                                          "Low: Lead ($0) | Copper ($1) | Silver ($2) | Gold ($10)\n"
+                                          "Medium: Lead ($0) | Copper ($2) | Silver ($4) | Gold ($25)\n"
+                                          "High: Lead ($0) | Copper ($5) | Silver ($10) | Gold ($50)\n\n"
+                                          "If each box contains gold, you earn $30 (lowstakes). If "
+                                          "they contained copper, silver, and gold, you would receive "
+                                          "$13 ($1 - $2 - $10) and so on.",
+                                     padx=10)
 
 class Help:
     def __init__(self, partner):
@@ -250,7 +258,7 @@ class Help:
         self.help_text.grid(column=0, row=1)
 
         # Dismiss button (row 2)
-        self.dismiss_btn = Button(self.help_frame, text="Dismiss", width=10, bg="#D43F3F",
+        self.dismiss_btn = Button(self.help_frame, text="Dismiss", width=10, bg="#C20000",
                                   font="arial 10 bold",
                                   command=partial(self.close_help, partner))
         self.dismiss_btn.grid(row=2, pady=10)
