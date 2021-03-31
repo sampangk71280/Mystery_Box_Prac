@@ -394,6 +394,8 @@ class Help:
 class stats:
     def __init__(self):
         print("hello")
+
+        
 # main routine
 if __name__ == "__main__":
     root = Tk()

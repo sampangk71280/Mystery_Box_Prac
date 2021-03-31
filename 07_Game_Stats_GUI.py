@@ -29,8 +29,8 @@ class Game:
         # Formatting variables...
         self.game_stats_list=[50,6]
 
-        self.round_stats_list=['copper ($3) | copper ($3) | lead($0) - Cost: $15 | Payback: $6 | Current Balance: $41', 'copper ($3) | copper ($3) | lead($0) - Cost: $15 | Payback: $6 | Current Balance: $32', 'copper ($3) | lead($0) | copper ($3) - Cost: $15 | Payback: $6 | Current Balance: $23', 'copper ($3) | silver ($6) | lead($0) - Cost: $15 | Payback: $9 | Current Balance: $17', 'lead($0) | silver ($6) | copper ($3) - Cost: $15 | Payback: $9 | Current Balance: $11']
-
+        self.round_stats_list=[]
+        
         self.game_frame = Frame()
         self.game_frame.grid()
 
@@ -43,7 +43,7 @@ class Game:
         # Stats Button (row 1)
         self.stats_button = Button(self.game_frame, text="Game Stats",
                                    font="Arial 14", padx=10, pady=10,
-                                   command=lambda: self.to_stats(self.round_stats_list))
+                                   command=lambda: self.to_stats(self.round_stats_list, self.game_stats_list))
         self.stats_button.grid(row=1)
 
     def to_stats(self, game_history, game_stats):
@@ -106,7 +106,7 @@ class GameStats:
         self.current_balance_label = Label(self.details_frame,
                                            text="Current Balance:", font=heading,
                                            anchor="e")
-        self.current_balance_label.grid(row=1, coloumn=0, padx=0)
+        self.current_balance_label.grid(row=1, column=0, padx=0)
 
         self.current_balance_value_label = Label(self.details_frame, font=content,
                                                   text="${}".format(game_stats[1]), anchor="e")
