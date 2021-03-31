@@ -238,7 +238,8 @@ class Game:
         self.help_button.grid(row=0, column=0, padx=2)
 
         self.stats_button = Button(self.help_export_frame, text="Game Stats...",
-                                   font="Arial 15 bold", bg="#006633", fg="white")
+                                   font="Arial 15 bold", bg="#006633", fg="white",
+                                   command=lambda: self.to_stats)
         self.stats_button.grid(row=0, column=1, padx=2)
 
         # Quit Button
@@ -350,7 +351,11 @@ class Game:
                                           "$13 ($1 - $2 - $10) and so on.",
                                      padx=10)
 
+    def to_stats(self):
+        stats()
+
 class Help:
+    
     def __init__(self, partner):
         # disable help button
         partner.help_button.config(state=DISABLED)
@@ -386,6 +391,9 @@ class Help:
         partner.help_button.config(state=NORMAL)
         self.help_box.destroy()
 
+class stats:
+    def __init__(self):
+        print("hello")
 # main routine
 if __name__ == "__main__":
     root = Tk()

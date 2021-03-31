@@ -2,7 +2,7 @@ from tkinter import *
 from functools import partial # to prevent unwanted windows
 import random
 
-
+# WOOJIN WAS HERE
 class Start:
     def __init__(self, parent):
 
@@ -62,7 +62,7 @@ class Start:
         Game(self, stakes, starting_balance)
 
 class Game:
-    def __int__(self, partner, stakes, starting_balance):
+    def __init__(self, partner, stakes, starting_balance):
         print(stakes)
         print(starting_balance)
 
