@@ -142,7 +142,7 @@ class GameStats:
 
     def close_stats(self, partner):
         # Put help button back to normal...
-        partner.help_button.config(state=NORMAL)
+        partner.stats_button.config(state=NORMAL)
         self.stats_box.destroy()
 
 

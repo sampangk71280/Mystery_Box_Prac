@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/07_Game_Stats_GUI.py" line="144" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c2116375-fc69-438c-b665-813e1fb714a9" name="Default" comment="" />
     <ignored path="Mystery_Box.iws" />
@@ -20,21 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AA_complied_game_v2.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AA_complied_game_v2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AA_complied_game_v2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
-              <caret line="108" column="46" selection-start-line="107" selection-start-column="70" selection-end-line="107" selection-end-column="73" />
+            <state relative-caret-position="-1549">
+              <caret line="166" column="66" selection-start-line="166" selection-start-column="66" selection-end-line="166" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="12_Assembled_Outcome.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="12_Assembled_Outcome.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Temperature-Converter/12_Assembled_Outcome.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="72" column="49" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="49" />
+            <state relative-caret-position="224">
+              <caret line="71" column="32" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
               <folding>
                 <element signature="e#3626#5386#0" expanded="false" />
                 <element signature="e#5430#5566#0" expanded="false" />
@@ -48,8 +51,8 @@
       <file leaf-file-name="07_Game_Stats_GUI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/07_Game_Stats_GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="77" column="19" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="19" />
+            <state relative-caret-position="2346">
+              <caret line="144" column="28" selection-start-line="144" selection-start-column="28" selection-end-line="144" selection-end-column="28" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -97,16 +100,15 @@
         <option value="$PROJECT_DIR$/05_Game_Playable_v2.py" />
         <option value="$PROJECT_DIR$/AA_complied_game_v1.py" />
         <option value="$PROJECT_DIR$/06_Help_GUI.py" />
-        <option value="$PROJECT_DIR$/AA_complied_game_v2.py" />
         <option value="$PROJECT_DIR$/07_Game_Stats_GUI.py" />
+        <option value="$PROJECT_DIR$/AA_complied_game_v2.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -143,7 +145,7 @@
       <recent name="C:\Users\sampangk71280\OneDrive - Massey High School\Documents\FileFromSchool\Documents\Year 13\COM301\Programming\Mystery_Box" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.07_Game_Stats_GUI">
+  <component name="RunManager" selected="Python.AA_complied_game_v2">
     <configuration default="false" name="05_Game_Playable_v2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -372,8 +374,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.07_Game_Stats_GUI" />
-        <item index="1" class="java.lang.String" itemvalue="Python.AA_complied_game_v2" />
+        <item index="0" class="java.lang.String" itemvalue="Python.AA_complied_game_v2" />
+        <item index="1" class="java.lang.String" itemvalue="Python.07_Game_Stats_GUI" />
         <item index="2" class="java.lang.String" itemvalue="Python.06_Help_GUI" />
         <item index="3" class="java.lang.String" itemvalue="Python.01_Help_GUI" />
         <item index="4" class="java.lang.String" itemvalue="Python.05_Game_Playable_v2" />
@@ -394,7 +396,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3611691" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -402,7 +404,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255814" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32870865" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -460,7 +462,7 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -775,14 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files/Python35/Lib/tkinter/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="1549" column="35" selection-start-line="1549" selection-start-column="35" selection-end-line="1549" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AA_complied_game_v1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -817,34 +811,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AA_complied_game_v2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="108" column="46" selection-start-line="107" selection-start-column="70" selection-end-line="107" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/07_Game_Stats_GUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="77" column="19" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Temperature-Converter/12_Assembled_Outcome.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="72" column="49" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="49" />
+        <state relative-caret-position="224">
+          <caret line="71" column="32" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
           <folding>
             <element signature="e#3626#5386#0" expanded="false" />
             <element signature="e#5430#5566#0" expanded="false" />
             <element signature="e#5613#5640#0" expanded="false" />
             <element signature="e#5670#6394#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07_Game_Stats_GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="144" column="28" selection-start-line="144" selection-start-column="28" selection-end-line="144" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python35/Lib/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2396">
+          <caret line="1549" column="0" selection-start-line="1549" selection-start-column="0" selection-end-line="1549" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AA_complied_game_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1549">
+          <caret line="166" column="66" selection-start-line="166" selection-start-column="66" selection-end-line="166" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
