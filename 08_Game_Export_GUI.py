@@ -29,7 +29,12 @@ class Game:
         # Formatting variables...
         self.game_stats_list=[50,6]
 
-        self.round_stats_list=[]
+        self.round_stats_list=['copper ($2) | silver ($4) | lead($0) - Cost: $10 | Payback: $6 | Current Balance: $46',
+             'copper ($2) | copper ($2) | copper ($2) - Cost: $10 | Payback: $6 | Current Balance: $42',
+             'lead($0) | lead($0) | silver ($4) - Cost: $10 | Payback: $4 | Current Balance: $36',
+             'copper ($2) | lead($0) | lead($0) - Cost: $10 | Payback: $2 | Current Balance: $28',
+             'silver ($4) | gold ($10) | lead($0) - Cost: $10 | Payback: $14 | Current Balance: $32']
+
         
         self.game_frame = Frame()
         self.game_frame.grid()
@@ -147,7 +152,7 @@ class GameStats:
         # Export button
         self.export_button = Button(self.export_dismiss_frame, text="Export",
                                     font="Arial 12 bold",
-                                    command=lambda: self.export(game_stats))
+                                    command=lambda: self.export(game_history, game_stats))
         self.export_button.grid(row=0, column=0)
 
         # Dismiss button
@@ -160,8 +165,8 @@ class GameStats:
         partner.stats_button.config(state=NORMAL)
         self.stats_box.destroy()
 
-    def export(self, game_history):
-        Export(self, game_history)
+    def export(self, game_history, game_stats):
+        Export(self, game_history, game_stats)
 
     def close_stats(self, partner):
         # Put help button back to normal...
@@ -172,6 +177,7 @@ class Export:
     def __init__(self, partner, game_history, all_game_stats):
 
         print(game_history)
+        print(round)
         background = "#F6D89E"  # pale orange
 
         # disable export button
@@ -199,7 +205,7 @@ class Export:
                                                          "calculation history to "
                                                          "text file",
                                  justify=LEFT, width=40, bg=background, wrap=250)
-        self.export_text.grid(column=0, row=1)
+        self.export_text.grid(row=1)
 
         # Warning text (label, row 2)
         self.export_text = Label(self.export_frame, text="If the filename you "
@@ -246,7 +252,6 @@ class Export:
         valid_char = "[A-Za-z0-9_]"
 
         filename = self.filename_entry.get()
-        # print(filename)
 
         for letter in filename:
             if re.match(valid_char, letter):
@@ -259,6 +264,7 @@ class Export:
             else:
                 problem = ("(no {}'s allowed)".format(letter))
                 has_error = "yes"
+            break
 
         if filename == "":
             problem = "can't be blank"
@@ -279,14 +285,17 @@ class Export:
             # create file to hold data
             f = open(filename, "w+")
 
-            f.write("Temperature Convertor Calculations\n\n")
+            f.write("Game Statistics\n\n")
 
             # Game stats
             for round in game_stats:
-                f.write(round + "\n")
+                # f.write(round + "\n")
+                rounds_text = "{} \n".format(round)
+                f.write(rounds_text)
 
             # Heading for rounds
             f.write("\nRound Details\n\n")
+
             # add new line at end of each item
             for item in game_history:
                 f.write(item + "\n")
